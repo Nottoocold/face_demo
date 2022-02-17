@@ -30,23 +30,6 @@ import static org.bytedeco.opencv.global.opencv_imgcodecs.*;
 public class RgbdTest {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
-		// cv
-		Mat src = imread("E:\\2d-3d\\sample01.jpg");
-		
-		System.out.println(src.depth());
-		System.out.println(src.channels());
-		System.out.println(src.arrayDepth());
-		System.out.println(src.arrayChannels());
-		
-		System.out.println("*********");
-		
-		NDManager manager = NDManager.newBaseManager();
-		Path path = Path.of("E:\\2d-3d\\sample01.jpg");
-		Image img = ImageFactory.getInstance().fromFile(path);
-		NDArray nd = img.toNDArray(manager);
-		System.out.println(nd);
-		
-		BytePointer p = src.ptr(0, 0, 3);
 		
 		
 	}
