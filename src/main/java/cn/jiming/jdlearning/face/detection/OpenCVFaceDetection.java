@@ -133,7 +133,7 @@ public class OpenCVFaceDetection {
                 //截取人脸
                 try {
                 	Mat face = new Mat();
-                    float size = w>h?w:h;
+                    float size = w>h?h:w;
                     getRectSubPix(src, new Size((int)size, (int)size), new Point2f((int) (tx + bx)/2, (int) (ty + by)/2), face);
                     BufferedImage bimg = Java2DFrameUtils.toBufferedImage(face);
                     
@@ -201,7 +201,7 @@ public class OpenCVFaceDetection {
                 
 
                 //截取人脸
-                float size = w>h?w:h;
+                float size = w>h?h:w;
                 Rect faceR = new Rect();
                 faceR.width((int)size);
                 faceR.height((int)size);
