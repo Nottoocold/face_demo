@@ -1,8 +1,7 @@
 package cn.jiming.jdlearning.test.face;
 
-import org.junit.Test;
-
 import cn.jiming.jdlearning.face.train.FaceClassificationTrain;
+import org.junit.Test;
 /**
  * 训练facenet
  * @author xiaoming

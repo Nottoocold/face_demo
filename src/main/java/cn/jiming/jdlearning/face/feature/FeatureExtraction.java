@@ -125,18 +125,7 @@ public final class FeatureExtraction {
     	// 转换Image
     	Image djl_img = ImageFactory.getInstance().fromImage(bimg);
 		
-		Predictor<Image, float[]> predictor = model.newPredictor();
-		float[] faceFeature = null;
-		try {
-			faceFeature = predictor.predict(djl_img);
-		} catch (TranslateException e) {
-			e.printStackTrace();
-		}finally {
-			//关闭预测者
-			predictor.close();
-		}
-		
-		return faceFeature;
+		return faceFeatureExtraction(djl_img);
 	}
 
 }
